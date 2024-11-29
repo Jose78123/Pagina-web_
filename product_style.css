@@ -1,0 +1,252 @@
+/* Variables globales */
+:root {
+    --primary-color: #37833B;
+    --secondary-color: #8CC63F;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-color: #e0e0e0;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenedor principal */
+.product-detail {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 300px;
+    gap: 2rem;
+}
+
+/* Galería de productos */
+.product-gallery {
+    width: 100%;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.thumbnail.active {
+    border-color: var(--primary-color);
+}
+
+/* Información del producto */
+.product-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: gold;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.payment-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.color-selection {
+    margin: 1.5rem 0;
+}
+
+.color-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.color-option {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.color-option.selected {
+    border-color: var(--primary-color);
+}
+
+.color-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Panel de compra */
+.purchase-info {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.buy-button, .cart-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.buy-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cart-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.payment-methods {
+    margin-top: 2rem;
+}
+
+.payment-type {
+    margin: 1rem 0;
+}
+
+.payment-cards, .payment-cash {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.payment-cards img, .payment-cash img {
+    height: 30px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .purchase-info {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .purchase-info {
+        grid-column: span 1;
+    }
+}
+/* Estilo para el botón de 'Ver otros productos' */
+.back-button {
+    background-color: #27AE60; /* Color verde */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px; /* Separación superior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos de transición */
+}
+
+.back-button:hover {
+    background-color: #2ECC71; /* Color verde más claro en hover */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+.back-button:focus {
+    outline: none; /* Eliminar el borde al hacer clic */
+}
+
+@media (max-width: 768px) {
+    .back-button {
+        width: 90%; /* Hacer el botón más pequeño en pantallas pequeñas */
+        margin-left: 5%;
+    }
+}

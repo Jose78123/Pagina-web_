@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Pantalla de inicio de sesión -->
+        <div class="login-form">
+            <h2>Iniciar sesión</h2>
+            <form action="index.html" method="POST">
+                <input type="email" placeholder="Correo electrónico" id="email" required>
+                <input type="password" placeholder="Contraseña" id="password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <div class="signup-link">
+                <span>¿No tienes una cuenta?</span>
+                <button id="signup-btn">Crear cuenta</button>
+            </div>
+        </div>
+
+        <!-- Formulario de creación de cuenta (oculto inicialmente) -->
+        <div class="signup-form" id="signup-form">
+            <h2>Crear cuenta</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Nombre" id="first-name" required>
+                <input type="text" placeholder="Apellidos" id="last-name" required>
+                <input type="email" placeholder="Correo electrónico" id="new-email" required>
+                <input type="password" placeholder="Contraseña" id="new-password" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            <div class="login-link">
+                <span>¿Ya tienes una cuenta?</span>
+                <button id="login-btn"><a href="index.html" style="text-decoration: none; color: inherit;">Iniciar sesión</a></button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+<style type="text/css">
+    
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor general */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario de inicio de sesión */
+.login-form h2 {
+    text-align: center;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #218838;
+}
+
+/* Enlace para crear cuenta */
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link span {
+    color: #555;
+}
+
+.signup-link button {
+    background-color: transparent;
+    border: none;
+    color: #28a745;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.signup-link button:hover {
+    color: #218838;
+}
+
+/* Formulario de creación de cuenta */
+.signup-form {
+    display: none;
+}
+
+.signup-form h2 {
+    text-align: center;
+    color: #333;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #218838;
+}
+
+/* Enlace para iniciar sesión desde el registro */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link span {
+    color: #555;
+}
+
+.login-link button {
+    background-color: transparent;
+    border: none;
+    color: #28a745;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.login-link button:hover {
+    color: #218838;
+}
+
+/* Animación para la transición entre formularios */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Aplicar animación */
+.signup-form, .login-form {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+</style>
+</html>

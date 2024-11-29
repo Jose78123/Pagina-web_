@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+	<html lang="es">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Catálogo de Productos</title>
+	    <link rel="stylesheet" href="styles.css">
+
+	</head>
+	<body>
+		<header id="hero">
+	        <img class="hoja1" src="./assets/hojas_tropicales.png" alt="hojas" width="362px" height="467px">
+	        <img class="hoja2" src="./assets/hojas_tropicales.png" alt="hojas" width="362px" height="467px">
+	        <nav class="navbar">
+	            <ul>
+	                <li><a href="index.html">Inicio</a></li>
+	                <li><a href="informacion.html">Info</a></li>
+	                <li><a href="carrito.html">Carrito</a></li>
+	                <li><a href="catalogo.html">Catálogo</a></li>
+	            </ul>
+	        </nav>
+	    </div>
+	        <div class="hero-content">
+	            
+	            <h1>Ecological Furniture</h1>
+	            <p>Transforma tu espacio, respeta la naturaleza</p>
+	            <style type="text/css">
+	            	/* Estilo para el encabezado */
+	header#hero {
+	    background-color: #f4f4f4; /* Puedes ajustar el color de fondo */
+	    padding: 10px 0; /* Reduce el padding para hacer el encabezado más pequeño */
+	    text-align: center; /* Alinea el texto al centro */
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	    min-height: 100px; /* Asegura que no se haga demasiado pequeño */
+	}
+
+	header#hero h1 {
+	    font-size: 24px; /* Reduce el tamaño del texto */
+	    margin: 5px 0; /* Ajusta el margen */
+	    color:white; /* Color del texto */
+	}
+
+	header#hero p {
+	    font-size: 14px; /* Reduce el tamaño del párrafo */
+	    color:white; /* Color del texto */
+	}
+
+	/* Estilo para la barra de navegación */
+	nav.navbar {
+	    width: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 5px 0; /* Reduce el espaciado superior e inferior */
+	    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligero */
+	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+	}
+
+	nav.navbar ul {
+	    display: flex;
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	}
+
+	nav.navbar ul li {
+	    margin: 0 15px; /* Espaciado entre los enlaces */
+	}
+
+	nav.navbar ul li a {
+	    text-decoration: none;
+	    font-size: 14px; /* Reduce el tamaño del texto del enlace */
+	    color: #333; /* Color de los enlaces */
+	    transition: color 0.3s;
+	}
+
+	nav.navbar ul li a:hover {
+	    color: #007bff; /* Color cuando el enlace es hover */
+	}
+
+	/* Reducción del tamaño de los iconos (hojas) */
+	header#hero img {
+	    width: 150px; /* Reduce el tamaño de las hojas */
+	    height: auto;
+	}
+
+	/* Estilo para el pie de página */
+	footer {
+	    background-color: #333;
+	    color: #fff;
+	    padding: 20px;
+	    text-align: center;
+	}
+
+	.social-icons {
+	    margin-top: 10px;
+	}
+
+	.social-icons a {
+	    margin: 0 10px;
+	    text-decoration: none;
+	}
+
+	.social-icons a:hover img {
+	    filter: brightness(0.5);
+	}
+
+	            </style>
+	    </header>
+	    <!-- Sección 3: Catálogo de productos (Carrusel) -->
+	    <section class="catalog" id="catalog">
+	        <h2>CATÁLOGO DE PRODUCTOS</h2>
+	        <div class="catalog-container">
+	            <!-- Botón para mover el carrusel hacia la izquierda -->
+	            <button class="arrow left" onclick="slideLeft()">&#9664;</button>
+
+	            <!-- Contenedor del carrusel (flexbox) -->
+	            <div class="products" id="product-slider">
+	                <!-- Producto 1 -->
+	                <div class="product-card">
+	                    <img src="./assets/Eco_Classic.png" alt="Producto 1" width="200px" height="200px">
+	                    <p>Librero ecológico "classic model" color blanco</p>
+	                    <span>$1700</span>
+	                    <button class="bt2"><a href="producto1.html">Comprar ahora</a></button>
+	                </div>
+	                <!-- Producto 2 -->
+	                <div class="product-card">
+	                    <img src="./assets/Compact_Vertical.png" alt="Producto 2" width="200px" height="200px">
+	                    <p>Librero ecológico "Compact-Vertical" color madera</p>
+	                    <span>$1100</span>
+	                    <button class="bt2"><a href="producto2.html">Comprar ahora</a></button>
+	                </div>
+	                <!-- Producto 3 -->
+	                <div class="product-card">
+	                    <img src="./assets/librero_multishef.png" alt="Producto 3" width="200px" height="200px">
+	                    <p>Librero ecológico "Multi-shelf" color azul cielo</p>
+	                    <span>$1400</span>
+	                    <button class="bt2"><a href="producto3.html">Comprar ahora</a></button>
+	                  
+	                </div>
+	                <!-- Producto 4 -->
+	                <div class="product-card">
+	                    <img src="./assets/EspacioAbierto.png" alt="Producto 4" width="200px" height="200px">
+	                    <p>Librero ecológico "Espacio Abierto" color blanco</p>
+	                    <span>$2400</span>
+	                     <button class="bt2"><a href="producto4.html">Comprar ahora</a></button>
+	                </div>
+	                <!-- Más productos pueden ir aquí -->
+	            </div>
+
+	            <!-- Botón para mover el carrusel hacia la derecha -->
+	            <button class="arrow right" onclick="slideRight()">&#9654;</button>
+	        </div>
+	    </section>
+
+	    <footer>
+	        <div class="footer-container">
+	            <p>&copy; 2024 Ecologic Furniture. Todos los derechos reservados.</p>
+	            <div class="social-icons">
+	                <a href="https://www.facebook.com/profile.php?id=61567458309766&mibextid=ZbWKwL" target="_blank" title="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
+      </a>
+      <a href=" https://www.instagram.com/ecological_furnitureoficial" target="_blank" title="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" width="30" height="30">
+      </a>
+      <a href="https://www.youtube.com/@CourtyBlox5768" target="_blank" title="YouTube">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="30" height="30">
+      </a>
+      <a href="http://tiktok.com/@ecologicalfurniture" target="_blank" title="TikTok">
+        <img src="./assets/tiktok.png" alt="TikTok" width="30" height="30">
+	                </a>
+	            </div>
+	        </div>
+	    </footer>
+
+	    <style>
+			
+			a {
+				text-decoration: none;
+				color:white;
+			}
+
+
+
+	        footer {
+	            background-color: #333;
+	            color: #fff;
+	            padding: 20px;
+	            text-align: center;
+	        }
+	        .social-icons {
+	            margin-top: 10px;
+	        }
+	        .social-icons a {
+	            margin: 0 10px;
+	            text-decoration: none;
+	        }
+	        .social-icons a:hover img {
+	            filter: brightness(0.5);
+	        }
+
+	        /* Estilos para el Carrusel */
+	        .catalog-container {
+	            position: relative;
+	            display: flex;
+	            justify-content: center;
+	            align-items: center;
+	            width: 100%;
+	            overflow: hidden;
+	        }
+
+	        .products {
+	            display: flex;
+	            transition: transform 0.5s ease;
+	            overflow: hidden;
+	        }
+
+	        .product-card {
+	            flex: 0 0 200px;
+	            margin: 0 10px;
+	            text-align: center;
+	        }
+
+	        .arrow {
+	            position: absolute;
+	            top: 50%;
+	            z-index: 1;
+	            font-size: 2rem;
+	            color: #333;
+	            background-color: rgba(255, 255, 255, 0.7);
+	            border: none;
+	            padding: 10px;
+	            cursor: pointer;
+	            transform: translateY(-50%);
+	        }
+
+	        .arrow.left {
+	            left: 10px;
+	        }
+
+	        .arrow.right {
+	            right: 10px;
+	        }
+
+	        .arrow:hover {
+	            background-color: rgba(255, 255, 255, 0.9);
+	        }
+
+			@media (max-width: 768px) {
+  .catalog-container {
+    padding: 0 10px;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    max-width: 250px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+}
+
+/* Ajustes adicionales */
+.catalog h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-card p {
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+	    </style>
+
+	    <script>
+	        // Función para mover el carrusel a la izquierda
+	        function slideLeft() {
+	            const slider = document.getElementById('product-slider');
+	            const firstChild = slider.firstElementChild;
+	            slider.appendChild(firstChild); // Mueve el primer elemento al final
+	        }
+
+	        // Función para mover el carrusel a la derecha
+	        function slideRight() {
+	            const slider = document.getElementById('product-slider');
+	            const lastChild = slider.lastElementChild;
+	            slider.prepend(lastChild); // Mueve el último elemento al inicio
+	        }
+	    </script>
+		
+	</body>
+	</html>
